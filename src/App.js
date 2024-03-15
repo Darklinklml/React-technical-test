@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import {createRef, useState} from "react";
+import './Components/Square';
+import Square from "./Components/Square";
 
 
 
@@ -34,7 +36,10 @@ function App() {
                 <div className="Counter-Box">{contador}</div>
             </div>
             <div className="Square-Container">
-                <div className="Counter-Square">
+                <Square tema={{
+                    backgroundColor: "chartreuse"
+                }
+                }>
                         <div className={"Counter-Square-Title"}>Counter Start</div><br/>
                         <input
                             className={"rounded-border"}
@@ -43,15 +48,19 @@ function App() {
                             onChange={onHandledInputChange}
                             type={"number"}/>
 
-                </div>
-                <div className="Set-Square">
-                <button className={"Set-Button rounded-border"} onClick={()=>initContador()}>
+                </Square>
+                <Square tema={{
+                    backgroundColor: "darkblue"
+                }}>
+                    <button className={"Set-Button rounded-border"} onClick={()=>initContador()}>
                         Set
                     </button>
-                </div>
-                <div className="Plus-Square">
+                </Square>
+                <Square tema={{
+                    backgroundColor: "red"
+                }}>
                     <button className={"Plus-Button rounded-border"} onClick={()=> increment()} >+</button>
-                </div>
+                </Square>
             </div>
             <div className={"Blue-Box"}></div>
         </div>
