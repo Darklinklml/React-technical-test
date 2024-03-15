@@ -1,0 +1,7 @@
+.Square{
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    justify-content: center;
+    width: calc(100%/3);
+}
