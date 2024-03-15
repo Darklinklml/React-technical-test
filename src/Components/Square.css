@@ -1,5 +1,6 @@
 .Square{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     vertical-align: center;
     justify-content: center;
