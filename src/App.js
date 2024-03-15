@@ -6,8 +6,6 @@ import Square from "./Components/Square";
 
 
 
-
-
 function App() {
 
     const [contador, setContador] = useState(0)
@@ -40,26 +38,27 @@ function App() {
                     backgroundColor: "chartreuse"
                 }
                 }>
-                        <div className={"Counter-Square-Title"}>Counter Start</div><br/>
+                    <div>
+                        <div
+                            className={"Counter-Square-Title"}
+                        >Counter Start
+                        </div>
                         <input
-                            className={"rounded-border"}
-                            id={"contador-inicial-input"}
+                            className={"rounded-border border-0"}
                             value={inputValue}
                             onChange={onHandledInputChange}
                             type={"number"}/>
-
+                    </div>
                 </Square>
                 <Square tema={{
                     backgroundColor: "darkblue"
                 }}>
-                    <button className={"Set-Button rounded-border"} onClick={()=>initContador()}>
-                        Set
-                    </button>
+                    <button className={"Set-Button rounded-border border-0"} onClick={() => initContador()}>Set</button>
                 </Square>
                 <Square tema={{
                     backgroundColor: "red"
                 }}>
-                    <button className={"Plus-Button rounded-border"} onClick={()=> increment()} >+</button>
+                    <button className={"Plus-Button rounded-border border-0"} onClick={()=> increment()} >+</button>
                 </Square>
             </div>
             <div className={"Blue-Box"}></div>
